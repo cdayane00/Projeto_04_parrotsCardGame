@@ -10,8 +10,15 @@ function entrada(cartas){
     for(let i=0; i<cartas;i++){
         organizaCartas.innerHTML += `
         <div class="cartas">
+            <img class="escondido" src="./Arquivos Úteis - Projeto 04 - Parrot Card Game/unicornparrot.gif">
             <img src="./Arquivos Úteis - Projeto 04 - Parrot Card Game/front.png">
         </div>`;
     }
+    organizaCartas.sort(comparador);
+
+}
+
+function comparador() { 
+	return Math.random() - 0.5; 
 }
 
