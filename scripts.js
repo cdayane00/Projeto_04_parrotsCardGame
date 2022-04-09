@@ -21,7 +21,7 @@ function embaralha(cartas){
         aux1[i]=gifs[i];
     }
     for(let i=0;i<cartas/2;i++){
-        aux1.push(gifs[i]);
+        aux1.push(gifs[i])
     }
     aux1.sort(comparador);
     for(let i=0; i<cartas/2;i++){
