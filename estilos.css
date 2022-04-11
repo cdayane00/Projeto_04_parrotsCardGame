@@ -6,7 +6,8 @@ body{
 .fundo{
     display: flex;
     justify-content: center;
-    justify-items: center;
+    flex-direction: column;
+    align-items: center;
 }
 .titulo{
     width: 540px;
@@ -24,7 +25,7 @@ body{
     padding-left: 250px;
     display: flex;
     flex-wrap: wrap;
-    justify-items: center;
+    align-items: center;
     justify-content: space-between;
     box-sizing: border-box;
 }
@@ -32,16 +33,55 @@ body{
     width: 117px;
     height: 146px;
     margin-top: 30px;
+    padding-top: 20px;
+    padding-left: 16px;
+    position: relative;
+
+}
+.back-face {
+    width: 100%;
+    height: 100%;
     background-color: #A7E9AF;
     border: 1px solid #99CEA8;
     box-sizing: border-box;
     border-radius: 5px;
-    padding-top: 20px;
-    padding-left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backface-visibility: hidden;
+    transition: all .2s;
+    transform-style: preserve-3d;
+    position: absolute;
 }
-img{
+
+.front-face{
+    width: 100%;
+    height: 100%;
+    background-color: #A7E9AF;
+    border: 1px solid #99CEA8;
+    box-sizing: border-box;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backface-visibility: hidden;
+    transition: all .2s;
+    transform-style: preserve-3d;
+    position: absolute;
+}
+.back-face img {
     width: 100px;
     height: 100px;
+}
+.front-face img {
+    width: 50px;
+    height: 50px;
+}
+.transf{
+    transform: rotateY(180deg);
+}
+button, cartas:hover{
+    cursor: pointer;
 }
 .escondido{
     display: none;
