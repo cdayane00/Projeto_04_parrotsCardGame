@@ -97,6 +97,10 @@ function verificaFim(){
 }
 function fim(){
     alert(`Você ganhou em ${cont} jogadas!`);
+    let novamente = prompt("Quer jogar de novo? sim ou não");
+    if(novamente==="sim"){
+        form.reset();
+    }
 }
 
 entrada(nCartas);

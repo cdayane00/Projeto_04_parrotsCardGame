@@ -1,13 +1,11 @@
 body{
-    background-color: #E5E5E5;
-    width: 100%;
-    height: 100%;
+  background-color: #E5E5E5;
 }
 .fundo{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 .titulo{
     width: 540px;
@@ -27,7 +25,6 @@ body{
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    box-sizing: border-box;
 }
 .cartas{
     width: 117px;
@@ -36,7 +33,6 @@ body{
     padding-top: 20px;
     padding-left: 16px;
     position: relative;
-
 }
 .back-face {
     width: 100%;
@@ -83,6 +79,32 @@ body{
 button, cartas:hover{
     cursor: pointer;
 }
-.escondido{
-    display: none;
-}
+@media (max-width: 614px) {
+    .jogo {
+      max-width: 400px;
+      height: fit-content;
+    }
+    .cartas {
+      padding-left: 0px;
+      padding-right: 0px;
+    }
+  }
+  @media (max-width: 935px) {
+    .titulo {
+      width: 400px;
+      height: fit-content;
+      font-size: 40px;
+      margin-top: 20px;
+    }
+    .jogo {
+      max-width: 800px;
+      height: fit-content;
+    }
+  }
+  @media (max-width: 380px) {
+    .titulo {
+      width: 280px;
+      font-size: 30px;
+      margin-top: 10px;
+    }
+  }
